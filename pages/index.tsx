@@ -8,36 +8,31 @@ export default function Home() {
       icon: Users,
       title: 'Virtual Assistance',
       description: 'Email management, data entry, research, scheduling, and administrative support to keep your business running smoothly.',
-      features: ['Email Management', 'Data Entry', 'Research', 'Scheduling'],
-      image: '/images/services/virtual-assistant.jpg'
+      features: ['Email Management', 'Data Entry', 'Research', 'Scheduling']
     },
     {
       icon: Pen,
       title: 'Freelance Writing',
       description: 'High-quality articles, blogs, copywriting, technical documentation, and creative content that engages your audience.',
-      features: ['Blog Writing', 'Copywriting', 'Technical Writing', 'Creative Content'],
-      image: '/images/services/writing-service.jpg'
+      features: ['Blog Writing', 'Copywriting', 'Technical Writing', 'Creative Content']
     },
     {
       icon: Monitor,
       title: 'Web & Graphic Design',
       description: 'Professional website creation, management, logo design, and complete branding solutions for your business.',
-      features: ['Website Design', 'Logo Creation', 'Branding', 'UI/UX Design'],
-      image: '/images/services/web-design.jpg'
+      features: ['Website Design', 'Logo Creation', 'Branding', 'UI/UX Design']
     },
     {
       icon: Video,
       title: 'Video Editing',
       description: 'Professional video editing using CapCut and Premiere Pro to create engaging content for your brand.',
-      features: ['CapCut Editing', 'Premiere Pro', 'Motion Graphics', 'Color Grading'],
-      image: '/images/services/video-editing.jpg'
+      features: ['CapCut Editing', 'Premiere Pro', 'Motion Graphics', 'Color Grading']
     },
     {
       icon: Brain,
       title: 'AI & Data Services',
       description: 'Cutting-edge AI solutions including prompt engineering, ChatGPT automation, and data annotation services.',
-      features: ['Prompt Engineering', 'ChatGPT Automation', 'Data Annotation', 'AI Integration'],
-      image: '/images/services/ai-services.jpg'
+      features: ['Prompt Engineering', 'ChatGPT Automation', 'Data Annotation', 'AI Integration']
     }
   ]
 
@@ -76,7 +71,6 @@ export default function Home() {
       {/* Hero Section */}
       <section id="home" className="pt-16 relative overflow-hidden min-h-screen flex items-center">
         <div className="absolute inset-0 bg-gradient-to-br from-primary-600 via-secondary-500 to-accent-500 opacity-90"></div>
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-white">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -122,8 +116,7 @@ export default function Home() {
               className="text-center bg-white p-8 rounded-xl shadow-lg"
             >
               <div className="w-24 h-24 mx-auto mb-6 rounded-full overflow-hidden bg-gradient-to-br from-primary-100 to-primary-200 flex items-center justify-center">
-                <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Global Team" className="w-full h-full object-cover" onError={(e) => { e.currentTarget.style.display = 'none'; e.currentTarget.nextElementSibling.style.display = 'flex'; }} />
-                <Globe className="text-primary-600" size={48} style={{display: 'none'}} />
+                <Globe className="text-primary-600" size={48} />
               </div>
               <h3 className="text-2xl font-bold mb-4">Global Reach</h3>
               <p className="text-gray-600">
@@ -139,8 +132,7 @@ export default function Home() {
               className="text-center bg-white p-8 rounded-xl shadow-lg"
             >
               <div className="w-24 h-24 mx-auto mb-6 rounded-full overflow-hidden bg-gradient-to-br from-secondary-100 to-secondary-200 flex items-center justify-center">
-                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="African Talent" className="w-full h-full object-cover" onError={(e) => { e.currentTarget.style.display = 'none'; e.currentTarget.nextElementSibling.style.display = 'flex'; }} />
-                <Users className="text-secondary-500" size={48} style={{display: 'none'}} />
+                <Users className="text-secondary-500" size={48} />
               </div>
               <h3 className="text-2xl font-bold mb-4">African Talent</h3>
               <p className="text-gray-600">
@@ -156,8 +148,7 @@ export default function Home() {
               className="text-center bg-white p-8 rounded-xl shadow-lg"
             >
               <div className="w-24 h-24 mx-auto mb-6 rounded-full overflow-hidden bg-gradient-to-br from-accent-100 to-accent-200 flex items-center justify-center">
-                <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="AI Integration" className="w-full h-full object-cover" onError={(e) => { e.currentTarget.style.display = 'none'; e.currentTarget.nextElementSibling.style.display = 'flex'; }} />
-                <Brain className="text-accent-500" size={48} style={{display: 'none'}} />
+                <Brain className="text-accent-500" size={48} />
               </div>
               <h3 className="text-2xl font-bold mb-4">AI Integration</h3>
               <p className="text-gray-600">
@@ -186,34 +177,19 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-gray-100 overflow-hidden"
+                className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-gray-100"
               >
-                <div className="h-48 relative overflow-hidden">
-                  <img 
-                    src={`https://images.unsplash.com/photo-${index === 0 ? '1560472354-b33ff0c44a43' : index === 1 ? '1455390582262-f1e512b6c5cd' : index === 2 ? '1467232004584-a241de8bcf5d' : index === 3 ? '1574717024653-61fd2cf4d44d' : '1677442136019-21780ecad995'}?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80`}
-                    alt={service.title}
-                    className="w-full h-full object-cover"
-                    onError={(e) => {
-                      e.currentTarget.style.display = 'none';
-                      e.currentTarget.nextElementSibling.style.display = 'flex';
-                    }}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary-600 to-secondary-500 opacity-80 flex items-center justify-center" style={{display: 'none'}}>
-                    <service.icon className="text-white" size={64} />
-                  </div>
-                </div>
-                <div className="p-8">
-                  <h3 className="text-xl font-bold mb-4">{service.title}</h3>
-                  <p className="text-gray-600 mb-6">{service.description}</p>
-                  <ul className="space-y-2">
-                    {service.features.map((feature, idx) => (
-                      <li key={idx} className="text-sm text-gray-500 flex items-center">
-                        <div className="w-2 h-2 bg-primary-600 rounded-full mr-2"></div>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                <service.icon className="text-primary-600 mb-6" size={48} />
+                <h3 className="text-xl font-bold mb-4">{service.title}</h3>
+                <p className="text-gray-600 mb-6">{service.description}</p>
+                <ul className="space-y-2">
+                  {service.features.map((feature, idx) => (
+                    <li key={idx} className="text-sm text-gray-500 flex items-center">
+                      <div className="w-2 h-2 bg-primary-600 rounded-full mr-2"></div>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
               </motion.div>
             ))}
           </div>
@@ -238,27 +214,11 @@ export default function Home() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden"
+                className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
               >
-                <div className="h-32 bg-gradient-to-br from-primary-100 to-primary-200 relative">
-                  <img 
-                    src={`https://images.unsplash.com/photo-${index === 0 ? '1486312338219-ce68d2c6f44d' : index === 1 ? '1561070791-2526d30994b5' : index === 2 ? '1574717024653-61fd2cf4d44d' : '1677442136019-21780ecad995'}?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80`}
-                    alt={item.title}
-                    className="w-full h-full object-cover"
-                    onError={(e) => {
-                      e.currentTarget.style.display = 'none';
-                      e.currentTarget.nextElementSibling.style.display = 'flex';
-                    }}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary-500 to-secondary-500 opacity-80 flex items-center justify-center" style={{display: 'none'}}>
-                    <span className="text-white font-bold text-lg">{item.type}</span>
-                  </div>
-                </div>
-                <div className="p-6">
-                  <div className="text-primary-600 font-semibold text-sm mb-2">{item.type}</div>
-                  <h3 className="font-bold text-lg mb-2">{item.title}</h3>
-                  <p className="text-gray-600 text-sm">{item.description}</p>
-                </div>
+                <div className="text-primary-600 font-semibold text-sm mb-2">{item.type}</div>
+                <h3 className="font-bold text-lg mb-2">{item.title}</h3>
+                <p className="text-gray-600 text-sm">{item.description}</p>
               </motion.div>
             ))}
           </div>
@@ -292,19 +252,8 @@ export default function Home() {
                 </div>
                 <p className="text-gray-600 mb-6 italic">"{testimonial.text}"</p>
                 <div className="flex items-center">
-                  <div className="w-12 h-12 rounded-full overflow-hidden mr-4 bg-gray-200">
-                    <img 
-                      src={`https://images.unsplash.com/photo-${index === 0 ? '1494790108755-2616c5e29a5b' : index === 1 ? '1507003211169-0a1dd7228f2d' : '1573496359142-b8d87734a5a2'}?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80`}
-                      alt={testimonial.name}
-                      className="w-full h-full object-cover"
-                      onError={(e) => {
-                        e.currentTarget.style.display = 'none';
-                        e.currentTarget.nextElementSibling.style.display = 'flex';
-                      }}
-                    />
-                    <div className="w-full h-full bg-gradient-to-br from-primary-400 to-secondary-400 flex items-center justify-center text-white font-bold" style={{display: 'none'}}>
-                      {testimonial.name.charAt(0)}
-                    </div>
+                  <div className="w-12 h-12 rounded-full mr-4 bg-gradient-to-br from-primary-400 to-secondary-400 flex items-center justify-center text-white font-bold">
+                    {testimonial.name.charAt(0)}
                   </div>
                   <div>
                     <div className="font-semibold">{testimonial.name}</div>
